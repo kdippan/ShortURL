@@ -30,7 +30,7 @@ A professional URL shortening service with QR code generation and social sharing
 
 | Desktop View | Mobile View |
 |--------------|-------------|
-| ![Desktop](https://i.postimg.cc/Nf0g7jZw/download.jpg) | ![Mobile](https://via.placeholder.com/300x500/4361ee/ffffff?text=Mobile+View) |
+| ![Desktop](https://i.postimg.cc/Nf0g7jZw/download.jpg) | ![Mobile]([https://via.placeholder.com/300x500/4361ee/ffffff?text=Mobile+View](https://i.postimg.cc/G2Q4tSTP/Screenshot-2025-08-01-20-21-45-68-40deb401b9ffe8e1df2f1cc5ba480b12.jpg)) |
 
 ## 🌐 Live Demo
 
