@@ -1,0 +1,124 @@
+<!-- © KDippan-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+  <script src="main.js" type="text/javascript" charset="utf-8"></script>
+<title>ShortURL - Professional URL Shortener & Link Management Tool</title>
+<meta name="title" content="ShortURL - Professional URL Shortener & Link Management Tool">
+<meta name="description" content="Create short links, QR codes, and trackable URLs for free. Our secure URL shortener helps you share links easily across platforms.">
+<meta name="keywords" content="URL shortener, link shortener, shorten URL, free URL shortener, link management, QR code generator, shareable links">
+<meta name="author" content="ShortURL">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Open Graph / Facebook Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shorturlgeneratorapp.netlify.app/">
+<meta property="og:title" content="ShortURL - Professional URL Shortener & Link Management Tool">
+<meta property="og:description" content="Create short links, QR codes, and trackable URLs for free. Our secure URL shortener helps you share links easily across platforms.">
+<meta property="og:image" content="https://i.postimg.cc/B62CVNKd/images.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="ShortURL">
+
+<!-- Twitter Meta Tags -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://shorturlgeneratorapp.netlify.app/">
+<meta property="twitter:title" content="ShortURL - Professional URL Shortener & Link Management Tool">
+<meta property="twitter:description" content="Create short links, QR codes, and trackable URLs for free. Our secure URL shortener helps you share links easily across platforms.">
+<meta property="twitter:image" content="https://i.postimg.cc/B62CVNKd/images.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://i.postimg.cc/B62CVNKd/images.png">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://shorturlgeneratorapp.netlify.app/">
+
+<!-- Theme Color (for mobile browsers) -->
+<meta name="theme-color" content="#4361ee">
+
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" href="https://i.postimg.cc/B62CVNKd/images.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-link"></i>
+                <h1>ShortURL</h1>
+            </div>
+            <p class="tagline">Create short links, QR codes, and shareable URLs</p>
+        </header>
+
+        <main>
+            <div class="url-form">
+                <div class="input-group">
+                    <input type="url" id="url-input" placeholder="Paste your long URL here..." required>
+                    <button id="shorten-btn">Shorten</button>
+                </div>
+                <div class="features">
+                    <span><i class="fas fa-lock"></i> Secure</span>
+                    <span><i class="fas fa-bolt"></i> Fast</span>
+                    <span><i class="fas fa-infinity"></i> Reliable</span>
+                </div>
+            </div>
+
+            <div class="result-container hidden">
+                <div class="result-box">
+                    <div class="original-url">
+                        <span id="original-url-text"></span>
+                    </div>
+                    <div class="shortened-url">
+                        <input type="text" id="shortened-url" readonly>
+                        <button id="copy-btn">Copy</button>
+                    </div>
+                    <div class="share-options">
+                        <button class="share-btn" data-platform="facebook"><i class="fab fa-facebook-f"></i></button>
+                        <button class="share-btn" data-platform="twitter"><i class="fab fa-twitter"></i></button>
+                        <button class="share-btn" data-platform="linkedin"><i class="fab fa-linkedin-in"></i></button>
+                        <button class="share-btn" data-platform="whatsapp"><i class="fab fa-whatsapp"></i></button>
+                        <button class="share-btn" id="qr-btn"><i class="fas fa-qrcode"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="qr-modal hidden">
+                <div class="qr-content">
+                    <span class="close-btn">&times;</span>
+                    <h3>QR Code</h3>
+                    <div id="qr-code"></div>
+                    <div class="qr-download">
+                        <button id="download-png">Download PNG</button>
+                        <button id="download-svg">Download SVG</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2023 ShortURL. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="notification hidden"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    
+</body>
+</html>
