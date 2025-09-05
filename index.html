@@ -122,6 +122,56 @@
         </footer>
     </div>
 
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-banner" 
+       class="hidden fixed bottom-5 left-1/2 -translate-x-1/2 w-11/12 md:w-2/3 lg:w-1/2 
+              bg-white shadow-xl rounded-2xl p-5 flex flex-col md:flex-row 
+              items-center justify-between gap-4 animate-slideUp z-50">
+    
+    <p class="text-gray-700 text-center md:text-left text-sm">
+      We use cookies to improve your experience and share information using 
+      <span class="font-semibold">Google Analytics</span>. By clicking OK, you consent.
+    </p>
+    
+    <button id="cookie-accept" 
+            class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 
+                   rounded-xl shadow-md transition transform hover:scale-105">
+      OK
+    </button>
+  </div>
+
+  <script>
+    // Check if consent already given
+    if (!localStorage.getItem("cookieConsent")) {
+      document.getElementById("cookie-banner").classList.remove("hidden");
+    }
+
+    // Handle Accept button click
+    document.getElementById("cookie-accept").addEventListener("click", () => {
+      localStorage.setItem("cookieConsent", "true");
+      const banner = document.getElementById("cookie-banner");
+      banner.classList.add("animate-fadeOut");
+      setTimeout(() => banner.remove(), 500);
+    });
+  </script>
+
+  <!-- Animations -->
+  <style>
+    @keyframes slideUp {
+      from { transform: translate(-50%, 100%); opacity: 0; }
+      to { transform: translate(-50%, 0); opacity: 1; }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; transform: translate(-50%, 0); }
+      to { opacity: 0; transform: translate(-50%, 50%); }
+    }
+    .animate-slideUp {
+      animation: slideUp 0.6s ease-out forwards;
+    }
+    .animate-fadeOut {
+      animation: fadeOut 0.5s ease-in forwards;
+    }
+  </style>
     <div class="notification hidden"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
